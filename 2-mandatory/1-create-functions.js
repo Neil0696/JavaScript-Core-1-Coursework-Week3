@@ -28,7 +28,9 @@ Write a function that:
 - Removes any forward slashes (/) in the strings.
 - Makes the strings all lowercase.
 */
-function tidyUpString() {
+function tidyUpString(arr) {
+  let trim = arr.map(element => element.trim().replace("/", "").toLowerCase());
+  return trim;
 }
 
 /*
@@ -37,7 +39,11 @@ Write a function that:
 - Returns a new array containing the same elements, but without the element at the passed index.
 */
 
-function remove() {
+function remove(arr, index) {
+  let newArr = []; 
+  let sliced = arr.slice(0, arr.length);
+  sliced.splice(index, 1);
+  return newArr = sliced;
 }
 
 /*
@@ -48,8 +54,14 @@ Write a function that:
 - Numbers greater 100 must be replaced with 100.
 */
 
-function formatPercentage() {
-}
+function formatPercentage(arr) {
+
+  return arr.map(number => {
+   if(number > 100) {
+    return "100%";
+    } return `${Math.round(number * 100) / 100}%`;
+  });
+};
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

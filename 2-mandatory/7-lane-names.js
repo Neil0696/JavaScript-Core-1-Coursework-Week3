@@ -6,7 +6,25 @@
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
 
-function getLanes() {}
+function getLanes(name) {
+
+  // -- 1st solution
+  
+//   let newArr = [];
+//   name.filter(e => {
+//     if(e.includes('Lane')){
+//       return newArr.push(e);
+//     }
+//   });
+//   return newArr;
+// };
+
+  //  -- 2nd solution 
+
+  return name.filter(e => e.includes('Lane'));
+};
+
+console.log(getLanes(['Abbe Lane', 'Meadow Lane', 'Leopold street']));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
